@@ -202,6 +202,9 @@
                                             <constraint firstAttribute="height" constant="40" id="Yw0-r3-Han"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="U7x-rE-w1N" eventType="touchUpInside" id="Kmc-LG-6y3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -258,29 +261,29 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7FP-J3-jdk">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7FP-J3-jdk">
                                         <rect key="frame" x="0.0" y="194" width="560" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-m2-rsn">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-m2-rsn">
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7D-4a-IAd">
-                                                <rect key="frame" x="140" y="0.0" width="140" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7D-4a-IAd">
+                                                <rect key="frame" x="122" y="0.0" width="117" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORh-6p-U5x">
-                                                <rect key="frame" x="280" y="0.0" width="140" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORh-6p-U5x">
+                                                <rect key="frame" x="239" y="0.0" width="204" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsC-hS-oLs">
-                                                <rect key="frame" x="420" y="0.0" width="140" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsC-hS-oLs">
+                                                <rect key="frame" x="443" y="0.0" width="117" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -436,6 +439,20 @@
                             <constraint firstAttribute="trailing" secondItem="V0h-l9-o6j" secondAttribute="trailing" id="vra-Ki-eyX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="baseAttackLbl" destination="sE4-yS-YJq" id="5Nd-Ml-Ecd"/>
+                        <outlet property="currentEvoImg" destination="6nt-aQ-uZj" id="cGl-dS-p3s"/>
+                        <outlet property="defenseLbl" destination="FsC-hS-oLs" id="6ow-De-AW0"/>
+                        <outlet property="descriptionLbl" destination="mjk-Yo-zP0" id="6LR-S1-RWz"/>
+                        <outlet property="evoLbl" destination="z5l-Lj-iGy" id="yBP-e9-moL"/>
+                        <outlet property="heightLbl" destination="98U-4P-j4N" id="wx3-lY-fKq"/>
+                        <outlet property="mainImg" destination="yVE-hk-nI9" id="LU6-hm-wnV"/>
+                        <outlet property="nameLbl" destination="EVC-rM-ibw" id="qbb-Op-0Jv"/>
+                        <outlet property="nextEvoImg" destination="Pgn-Jk-DVs" id="qcU-bd-erU"/>
+                        <outlet property="pokedexLbl" destination="oQn-m2-ivm" id="w8i-qd-li8"/>
+                        <outlet property="typeLbl" destination="Q7D-4a-IAd" id="Aa0-ek-sLA"/>
+                        <outlet property="weightLbl" destination="eTo-KP-Ol1" id="rvI-9v-fum"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLE-y7-D4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
