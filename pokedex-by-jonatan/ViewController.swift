@@ -13,6 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var SearchBar: UISearchBar!
+    @IBOutlet weak var soundBtn: UIButton!
     
     var pokemon = [Pokemon]()
     var musicPlayer: AVAudioPlayer!
@@ -38,7 +39,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
-            musicPlayer.play()
+            
+            if let soundShouldPlay = NSUserDefaults.standardUserDefaults().valueForKey("audio") as? Bool {
+                if soundShouldPlay {
+                    musicPlayer.play()
+                } else {
+                    soundBtn.alpha = 0.3
+                }
+            } else {
+                musicPlayer.play()
+                
+                NSUserDefaults.standardUserDefaults().setValue(true, forKey: "audio")
+                NSUserDefaults.standardUserDefaults().synchronize()
+            }
         } catch let err as NSError {
             print(err.debugDescription)
         }
@@ -114,10 +127,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if musicPlayer.playing {
             musicPlayer.stop()
-            sender.alpha = 0.3
+            soundBtn.alpha = 0.3
+            
+            NSUserDefaults.standardUserDefaults().setValue(false, forKey: "audio")
+            NSUserDefaults.standardUserDefaults().synchronize()
         } else {
             musicPlayer.play()
-            sender.alpha = 1.0
+            soundBtn.alpha = 1.0
+            
+            NSUserDefaults.standardUserDefaults().setValue(true, forKey: "audio")
+            NSUserDefaults.standardUserDefaults().synchronize()
         }
     }
     

@@ -172,7 +172,6 @@ class Pokemon {
                                 
                                 if let description = descDict["description"] as? String {
                                     self._description = description
-                                    print(self._description)
                                 }
                             }
                             completed()
@@ -198,20 +197,10 @@ class Pokemon {
                                 if let lvl = evolutions[0]["level"] as? Int {
                                     self._nextEvolutionLvl = "\(lvl)"
                                 }
-                                print(self._nextEvolutionId)
-                                print(self._nextEvolutionTxt)
-                                print(self._nextEvolutionLvl)
                             }
                         }
                     }
                 }
-                
-                print(self._weight)
-                print(self._height)
-                print(self._attack)
-                print(self._defense)
-                print(self._types)
-                
             }
         }
     } 
